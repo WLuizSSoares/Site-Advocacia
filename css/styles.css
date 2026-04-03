@@ -40,6 +40,7 @@
     justify-content: space-between;
     border-bottom: 1px solid #222;
     padding: 10px 10%;
+    gap: 20px;
 }
 
 .header-identidade{
@@ -149,6 +150,7 @@ body{
    background: radial-gradient(circle, #12110f 0%, #050505 100%);
     color: var(--cor-texto);
 }
+
 .container-perfil{
     position: relative;
     display: flex;
@@ -181,7 +183,7 @@ main{
 }
 
 .perfil p{
-    max-width: 450px;
+    max-width: 500px;
 }
 
 .texto{
@@ -233,6 +235,7 @@ p{
 }
 
 .reverso .perfil{
+
     text-align: left;
     
 }
@@ -266,24 +269,30 @@ p{
 
 .secao-escritorios{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 50%;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
     margin: auto;
-    padding: 80px 0 80px 0;
+    padding: 0 40px 20px 0;
+}
+
+.escritorios, .formulario{
+    flex: 1;
 }
 
 .secao-escritorios h3{
+    font-family: "CaviarDreams";
+    color: var(--cor-primaria);
     display: flex;
     justify-content: center;
     font-size: 30px;
 }
-
 .escritorios-wrapper{
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    padding: 0 0 20px 0;
 }
 
 .card-escritorio{
@@ -336,6 +345,30 @@ p{
     opacity: 0.8;
 }
 
+.formulario-contato {
+    flex: 1;
+    background: #12110F;
+    padding: 20px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.titulo-form{
+    font-family: "CaviarDreams";
+    font-size: 30px;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.campo input, .campo textarea{
+    width: 100%;
+}
+
 @media (max-width: 768px) {
 
     .container-perfil,
@@ -360,5 +393,9 @@ p{
         border-left: none;
         border-right: none;
         border-bottom: 6px solid #C5A059;
+    }
+
+    .secao-escritorios {
+        flex-direction: column;
     }
 }
