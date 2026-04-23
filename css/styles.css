@@ -267,16 +267,84 @@ p{
     );
 }
 
-.secao-escritorios{
+.areas_atuacao{
+    padding: 40px 10%;
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 40px;
-    margin: auto;
-    padding: 0 40px 20px 0;
+    flex-direction: column;
+    align-items: center;
+
+
 }
 
-.escritorios, .formulario{
+.titulo-sessao-atuacao{
+    font-family: "CaviarDreams", sans-serif;
+    color: var(--cor-primaria);
+    box-sizing: border-box;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.atuacao{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.card-atuacao{
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) ;
+    background-color: #0d0d0d;
+    /* Uso do rgba permite controlar as cores e a opacidade no canal alpha. a opacidade vai de 0 a 1. */
+    border: 1px solid rgba(255, 225, 125, 0.2);
+    border-radius: 6px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transição de efeito elástico */
+    padding: 40px 5%;
+    
+   
+}
+
+.card-atuacao:hover{
+    transform: translateY(-10px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.card-atuacao p{
+    line-height: 1.6; /* Dá espaço entre as linhas para o texto "respirar" */
+    letter-spacing: 0.5px; /* Afasta levemente as letras para evitar confusãovisual*/
+    color: rgba(245, 245, 220, 0.8); /* Texto um pouco mais suave que o branco puro */
+}
+
+.nome-area{
+    color: var(--cor-primaria);
+    letter-spacing: 2px; /* Titulos com letras afastadas para sensação de luxo */
+    padding: 0 0 30px 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    display: block;
+    
+}
+
+
+.secao-escritorios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 5%;
+}
+
+.escritorios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     flex: 1;
 }
 
@@ -340,21 +408,58 @@ p{
 }
 
 .btn-maps:hover{
-    border-bottom: var(--cor-primaria);
+    border-bottom:1px solid var(--cor-primaria);
     letter-spacing: 1.5px;
     opacity: 0.8;
 }
 
 .formulario-contato {
     flex: 1;
+    min-width: 450px;
+    height: auto;
     background: #12110F;
-    padding: 20px;
-    border-radius: 10px;
-
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 225, 125, 0.1);
+    transition: 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+}
+
+
+/*Quando o usuário clica em qualquer campo, o card do formulário ganha "vida" */
+.formulario-contato:focus-within{
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 20px rgba(255, 225, 145, 0.1);
+}
+
+.campo label{
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Estilização dos inputs para não parecerem padrão */
+.campo input, .campo textarea{
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none; /* Remove a borda azul do navegador */
+    transition: 0.3s;
+
+
+}
+
+.campo input:focus{
+    border-color: var(--cor-primaria);
+    background: #222;
 }
 
 .titulo-form{
@@ -365,9 +470,27 @@ p{
     text-align: center;
 }
 
-.campo input, .campo textarea{
-    width: 100%;
+.btn-enviar{
+    background: transparent;
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: 15px 30px;
+    font-family: "CaviarDreams", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 10px;
 }
+
+.btn-enviar:hover {
+    background: var(--cor-primaria);
+    color: black;
+}
+
+
 
 @media (max-width: 768px) {
 
