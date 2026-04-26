@@ -329,23 +329,45 @@ p{
     
 }
 
+.divisor{
+    border: none;
+    height: 3px;
+    width: 80%;
+    margin: 80px auto;
+
+    background: rgba(255, 225, 145, 0.1);
+}
+
 
 .secao-escritorios{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
     gap: 60px;
     max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 5%;
+    margin: 80px auto;
+    padding: 0 10%;
+    text-align: center;
+    
+}
+
+.secao-escritorios::after{
+    content: "";
+    display: block;
+    width: 80%; 
+    height: 2px;
+    margin: 100px auto;
+    background: radial-gradient(circle, 
+        var(--cor-primaria) 0%, 
+        rgba(255, 225, 145, 0.2) 10%, 
+        transparent 70%
+    );
+    box-shadow: 0 0 15px rgba(255, 225, 145, 0.3);
+    position: relative;
+    z-index: 10;
 }
 
 .escritorios {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex: 1;
 }
 
 .secao-escritorios h3{
@@ -360,7 +382,7 @@ p{
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    padding: 0 0 20px 0;
+    margin-top: 40px;
 }
 
 .card-escritorio{
@@ -415,7 +437,7 @@ p{
 
 .formulario-contato {
     flex: 1;
-    min-width: 450px;
+    min-width: 600px;
     height: auto;
     background: #12110F;
     padding: 40px;
@@ -427,6 +449,13 @@ p{
     justify-content: center;
 }
 
+.secao-contato{
+    background-color: rgba(10, 10, 10, 0.085);
+    backdrop-filter: blur(5px);
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+}
 
 /*Quando o usuário clica em qualquer campo, o card do formulário ganha "vida" */
 .formulario-contato:focus-within{
@@ -448,11 +477,13 @@ p{
     background: #1a1a1a;
     border: 1px solid #333;
     color: white;
-    padding: 12px;
+    padding: 15px;
     border-radius: 5px;
     margin-bottom: 15px;
     outline: none; /* Remove a borda azul do navegador */
     transition: 0.3s;
+    width: 100%;
+    font-family: inherit;
 
 
 }
